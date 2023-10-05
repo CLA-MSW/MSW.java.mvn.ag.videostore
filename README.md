@@ -15,38 +15,34 @@ Utilice las herramientas y técnicas estudiadas para dar mantenimiento a esta ap
 
 ## Uso del proyecto con Maven
 
-### Ubicación inicial
-```
-cd app
-```
 ### Compilar
 ```
-mvn compile
+mvn -f app compile
 ```
 ### Probar N tests
 ```
-mvn test
+mvn -f app test
 ```
 ### Probar 1 test
 ```
-mvn test -Dtest="AppTest#testSingleNewReleaseStatement"
-mvn test -Dtest="AppTest#testDualNewReleaseStatement"
-mvn test -Dtest="AppTest#testSingleChildrensStatement"
-mvn test -Dtest="AppTest#testMultipleRegularStatement"
-mvn test -Dtest="AppTest#testRentalStatementFormat"
+mvn -f app test -Dtest="AppTest#testSingleNewReleaseStatement"
+mvn -f app test -Dtest="AppTest#testDualNewReleaseStatement"
+mvn -f app test -Dtest="AppTest#testSingleChildrensStatement"
+mvn -f app test -Dtest="AppTest#testMultipleRegularStatement"
+mvn -f app test -Dtest="AppTest#testRentalStatementFormat"
 
 ```
 ### Ejecutar App
 ```
-java -cp target/classes miPrincipal.App
+java -cp app/target/classes miPrincipal.App
 ```
 ### Empacar App
 ```
-mvn package
+mvn -f app package
 ```
 ### Limpiar binarios
 ```
-mvn clean
+mvn -f app clean
 ```
 ## Comandos Git-Cambios y envío a Autograding
 
