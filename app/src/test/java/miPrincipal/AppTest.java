@@ -41,6 +41,7 @@ class AppTest {
     statement.addRental(new Rental(newRelease1, 3));
     statement.makeRentalStatement();
     assertAmountAndPointsForReport(9.0, 2);
+    statement.clearRentals();
   }
 
   @Test public void testDualNewReleaseStatement() {
@@ -48,12 +49,14 @@ class AppTest {
     statement.addRental(new Rental(newRelease2, 3));
     statement.makeRentalStatement();
     assertAmountAndPointsForReport(18.0, 4);
+    statement.clearRentals();
   }
 
   @Test public void testSingleChildrensStatement() {
     statement.addRental(new Rental(childrens, 3));
     statement.makeRentalStatement();
     assertAmountAndPointsForReport(1.5, 1);
+    statement.clearRentals();
   }
 
 
@@ -63,6 +66,7 @@ class AppTest {
     statement.addRental(new Rental(regular3, 3));
     statement.makeRentalStatement();
     assertAmountAndPointsForReport(7.5, 3);
+    statement.clearRentals();
   }
 
   @Test public void testRentalStatementFormat() {
@@ -78,5 +82,6 @@ class AppTest {
         "You owed 7.5\n" +
         "You earned 3 frequent renter points\n",
       statement.makeRentalStatement());
+    statement.clearRentals();
   }
 }
