@@ -11,6 +11,10 @@ public class RentalStatement {
     this.name = customerName;
   }
 
+  public void clearRentals() {
+    rentals.clear();
+  }
+
   public void addRental(Rental rental) {
     rentals.add(rental);
   }
