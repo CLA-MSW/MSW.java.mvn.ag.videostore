@@ -17,32 +17,32 @@ Utilice las herramientas y técnicas estudiadas para dar mantenimiento a esta ap
 
 ### Compilar
 ```
-mvn -f app compile
+mvn compile
 ```
 ### Probar N tests
 ```
-mvn -f app test
+mvn test
 ```
 ### Probar 1 test
 ```
-mvn -f app test -Dtest="AppTest#testSingleNewReleaseStatement"
-mvn -f app test -Dtest="AppTest#testDualNewReleaseStatement"
-mvn -f app test -Dtest="AppTest#testSingleChildrensStatement"
-mvn -f app test -Dtest="AppTest#testMultipleRegularStatement"
-mvn -f app test -Dtest="AppTest#testRentalStatementFormat"
+mvn test -Dtest="AppTest#testSingleNewReleaseStatement"
+mvn test -Dtest="AppTest#testDualNewReleaseStatement"
+mvn test -Dtest="AppTest#testSingleChildrensStatement"
+mvn test -Dtest="AppTest#testMultipleRegularStatement"
+mvn test -Dtest="AppTest#testRentalStatementFormat"
 
 ```
 ### Ejecutar App
 ```
-java -cp app/target/classes miPrincipal.App
+java -cp target/classes miPrincipal.App
 ```
 ### Empacar App
 ```
-mvn -f app package
+mvn package
 ```
 ### Limpiar binarios
 ```
-mvn -f app clean
+mvn clean
 ```
 ## Comandos Git-Cambios y envío a Autograding
 
